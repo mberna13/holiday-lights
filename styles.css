@@ -1,0 +1,80 @@
+#holiday-lights-frame {
+  position: fixed;
+  pointer-events: none;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 999999;
+}
+
+.holiday-lights {
+  display: flex;
+  position: absolute;
+}
+
+.holiday-lights.top {
+  top: 0; left: 0;
+  width: 100%; height: 20px;
+  justify-content: space-around;
+}
+.holiday-lights.bottom {
+  bottom: 0; left: 0;
+  width: 100%; height: 20px;
+  justify-content: space-around;
+}
+.holiday-lights.left {
+  top: 0; left: 0;
+  flex-direction: column;
+  height: 100%; width: 20px;
+  justify-content: space-around;
+}
+.holiday-lights.right {
+  top: 0; right: 0;
+  flex-direction: column;
+  height: 100%; width: 20px;
+  justify-content: space-around;
+}
+
+.bulb {
+  width: 12px;
+  height: 18px;
+  border-radius: 50%;
+  margin: 2px;
+  background-color: red;
+  box-shadow: 0 0 5px red;
+  animation: blink 3s infinite ease-in-out;
+}
+
+#holiday-snow {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999998; /* slightly under lights frame */
+}
+
+.snowflake {
+  position: absolute;
+  top: -2em;
+  color: white;
+  text-shadow: 0 0 5px #00f, 0 0 10px #0ff;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+.bulb:nth-child(4n+1) { background: red;    box-shadow: 0 0 10px red; }
+.bulb:nth-child(4n+2) { background: green;  box-shadow: 0 0 10px green; }
+.bulb:nth-child(4n+3) { background: yellow; box-shadow: 0 0 10px yellow; }
+.bulb:nth-child(4n+4) { background: blue;   box-shadow: 0 0 10px blue; }
+
+@keyframes blink {
+  from { opacity: 1; }
+  to { opacity: 0.2; }
+}

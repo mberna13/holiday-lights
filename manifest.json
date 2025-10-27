@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Holiday Lights Frame",
+  "version": "1.0",
+  "description": "Adds a festive frame of blinking holiday lights around webpages.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Toggle Holiday Lights"
+  }
+}
