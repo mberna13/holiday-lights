@@ -41,7 +41,7 @@
   margin: 2px;
   background-color: red;
   box-shadow: 0 0 5px red;
-  animation: blink 3s infinite ease-in-out;
+  animation: blink 2s infinite alternate;
 }
 
 #holiday-snow {
